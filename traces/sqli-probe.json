@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "app": "edge-shield-demo",
+  "request": {
+    "url": "https://edge-shield-demo.gregale.app/search?q=1%27%20OR%20%271%27%3D%271",
+    "method": "GET",
+    "headers": [
+      "User-Agent: sqlmap/1.8",
+      "X-Probe: <script>alert(1)</script>"
+    ],
+    "client_ip": "198.51.100.42"
+  }
+}

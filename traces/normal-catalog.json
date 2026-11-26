@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "app": "edge-shield-demo",
+  "request": {
+    "url": "https://edge-shield-demo.gregale.app/catalog",
+    "method": "GET",
+    "headers": [
+      "Accept: application/json"
+    ]
+  }
+}

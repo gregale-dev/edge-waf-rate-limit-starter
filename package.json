@@ -1,0 +1,15 @@
+{
+  "name": "edge-waf-rate-limit-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pre-wake OWASP WAF, proof-of-work challenge, composite rate limits, edge caching, hard spend caps, and replayable edge-trace scenarios for Gregale.",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

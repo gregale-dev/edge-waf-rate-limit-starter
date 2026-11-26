@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "app": "edge-shield-demo",
+  "request": {
+    "url": "https://edge-shield-demo.gregale.app/search?q=microvm",
+    "method": "GET",
+    "headers": [
+      "User-Agent: Mozilla/5.0",
+      "Accept: text/html"
+    ],
+    "client_ip": "203.0.113.19",
+    "country": "US"
+  }
+}

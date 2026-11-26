@@ -1,0 +1,11 @@
+{
+  "kind": "waf",
+  "match_host": "@app",
+  "match_path": "/**",
+  "action": {
+    "mode": "block",
+    "paranoia_level": 1,
+    "anomaly_threshold": 5,
+    "inspect_body_bytes": 8192
+  }
+}

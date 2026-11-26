@@ -1,0 +1,4 @@
+hosting:
+  start: node src/server.js
+  port: 8080
+  health: /healthz

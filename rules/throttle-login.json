@@ -1,0 +1,13 @@
+{
+  "kind": "throttle",
+  "match_host": "@app",
+  "match_path": "/login",
+  "match_methods": ["POST"],
+  "action": {
+    "requests_per_second": 0.1,
+    "burst": 5,
+    "key_by": "composite",
+    "key_fields": ["ip", "header:x-username"],
+    "count_statuses": [401]
+  }
+}

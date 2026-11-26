@@ -1,0 +1,14 @@
+{
+  "kind": "challenge",
+  "match_host": "@app",
+  "match_path": "/search",
+  "match": {
+    "field": "verified_bot",
+    "op": "missing"
+  },
+  "action": {
+    "difficulty": 16,
+    "max_difficulty": 20,
+    "pass_ttl_seconds": 1800
+  }
+}

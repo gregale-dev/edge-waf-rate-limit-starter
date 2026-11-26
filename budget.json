@@ -1,0 +1,20 @@
+{
+  "name": "Preview spending",
+  "scope": {
+    "kind": "account"
+  },
+  "currency": "USD",
+  "meters": [
+    "compute"
+  ],
+  "basis": "net_usage",
+  "limit_millicents": 1000000,
+  "notify_millicents": [
+    800000
+  ],
+  "mode": "monitored",
+  "action": "stop_previews",
+  "drain_seconds": 30,
+  "resume_rule": "manual",
+  "enabled": true
+}

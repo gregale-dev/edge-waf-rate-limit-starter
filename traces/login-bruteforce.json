@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "app": "edge-shield-demo",
+  "request": {
+    "url": "https://edge-shield-demo.gregale.app/login",
+    "method": "POST",
+    "headers": [
+      "Content-Type: application/json",
+      "X-Username: alice"
+    ],
+    "client_ip": "198.51.100.77",
+    "body": "{\"username\":\"alice\",\"password\":\"wrong\"}"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "cache",
+  "match_host": "@app",
+  "match_path": "/catalog",
+  "action": {
+    "max_age_seconds": 60,
+    "stale_while_revalidate_seconds": 120,
+    "stale_if_error_seconds": 300
+  }
+}
