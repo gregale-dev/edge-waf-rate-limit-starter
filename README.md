@@ -1,5 +1,7 @@
 # Pre-Wake Edge WAF, Bot Challenge, Rate Limits & Spend Caps
 
+[![Deploy on Gregale](https://gregale.dev/deploy-badge.svg)](https://gregale.dev/deploy?repo=https://github.com/gregale-dev/edge-waf-rate-limit-starter)
+
 Block SQLi/XSS probes, credential stuffing, and unverified scrapers **at the
 edge before waking a MicroVM** (`$0` compute on rejected traffic), cache catalog
 reads declaratively, replay traffic scenarios offline/live with `gregale edge rule trace`,
