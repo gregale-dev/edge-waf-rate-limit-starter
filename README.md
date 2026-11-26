@@ -16,13 +16,13 @@ and [Hard spend caps](https://gregale.dev/features/strict-budgets).
 - [traces/](./traces): reusable version-1 scenarios (`normal-catalog.json`,
   `sqli-probe.json`, `scraper-search.json`, `login-bruteforce.json`) for
   `gregale edge rule trace --config`.
-- [rules/](./rules): declarative JSON rule specs (`waf-block.json`,
-  `challenge-scrapers.json`, `throttle-login.json`, `cache-catalog.json`) usable
-  with `--add-rule @rules/<file>.json` during trace dry-runs.
+- [rules/](./rules): proposed edge-rule JSON files (`challenge-scrapers.json`,
+  `throttle-login.json`, `cache-catalog.json`) formatted for
+  `gregale edge rule trace --add-rule @rules/<file>.json`.
 - [budget.json](./budget.json): monitored `stop_previews` budget spec for
   `gregale billing budgets create --file budget.json`.
 - [scripts/apply-edge-rules.sh](./scripts/apply-edge-rules.sh): provisions the
-  full edge stack on any deployed app.
+  full edge stack (including in-path OWASP CRS `kind=waf`) on any deployed app.
 
 ## Run locally
 
@@ -36,7 +36,6 @@ npm start
 Dry-run any trace scenario with proposed rules before changing live edge traffic:
 
 ```sh
-gregale edge rule trace --config traces/sqli-probe.json --add-rule @rules/waf-block.json
 gregale edge rule trace --config traces/scraper-search.json --add-rule @rules/challenge-scrapers.json
 gregale edge rule trace --config traces/login-bruteforce.json --add-rule @rules/throttle-login.json
 gregale edge rule trace --config traces/normal-catalog.json --add-rule @rules/cache-catalog.json
@@ -44,7 +43,8 @@ gregale edge rule trace --config traces/normal-catalog.json --add-rule @rules/ca
 
 > **Tip:** Replace `"app": "edge-shield-demo"` and the request URL hosts inside
 > `traces/*.json` with your own app slug / `<app>.gregale.app` hostname before running
-> live traces.
+> live traces. WAF (`kind=waf`) is configured via `gregale edge rule create --kind waf`
+> (see [scripts/apply-edge-rules.sh](./scripts/apply-edge-rules.sh)).
 
 ## Deploy & apply rules
 

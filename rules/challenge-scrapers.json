@@ -7,8 +7,10 @@
     "op": "missing"
   },
   "action": {
-    "difficulty": 16,
-    "max_difficulty": 20,
-    "pass_ttl_seconds": 1800
+    "challenge": {
+      "difficulty": 16,
+      "max_difficulty": 20,
+      "pass_ttl_seconds": 1800
+    }
   }
 }

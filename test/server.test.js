@@ -85,12 +85,12 @@ describe('edge trace, rule, and budget JSON fixtures', () => {
   it('validates rule create specs and budget.json', () => {
     const rulesDir = path.join(ROOT_DIR, 'rules');
     const files = fs.readdirSync(rulesDir).filter((f) => f.endsWith('.json'));
-    assert.ok(files.length >= 4);
+    assert.ok(files.length >= 3);
 
     for (const file of files) {
       const rule = JSON.parse(fs.readFileSync(path.join(rulesDir, file), 'utf8'));
       assert.equal(rule.match_host, '@app', `${file}: security rules should target @app`);
-      assert.ok(rule.kind && rule.action, `${file}: kind and action required`);
+      assert.ok(rule.kind && rule.action?.[rule.kind], `${file}: kind and action[kind] required`);
     }
 
     const budget = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'budget.json'), 'utf8'));
