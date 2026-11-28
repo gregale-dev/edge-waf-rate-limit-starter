@@ -68,6 +68,15 @@ gregale edge rule history --app edge-shield-demo
 gregale edge rule rollback --app edge-shield-demo --to <version>
 ```
 
+## Guides
+
+On [gregale.dev](https://gregale.dev):
+
+- [How to rate-limit an API per IP without writing code](https://gregale.dev/articles/rate-limit-api-per-ip-without-code)
+- [How to stop bot traffic cloud bill shock without taking your site down](https://gregale.dev/articles/stop-bot-traffic-cloud-bill-shock)
+- [Hard cloud spend caps that actually stop runaway bills](https://gregale.dev/articles/hard-cloud-spend-caps)
+- [Programmable edge rules and replayable trace testing without Nginx or Cloudflare](https://gregale.dev/articles/edge-rules-rate-limiting-trace-testing)
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
